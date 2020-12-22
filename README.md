@@ -4,12 +4,15 @@
 
 - bisection.py 数值分析-二分法
 - kmeans 机器学习-聚类分析
+- RandSelect 随机选择算法，从无序的数组---A[left, right]中返回第K大的数
 
 - BubbleSort 冒泡排序
 - MergeSort 归并排序-
 - SelectSort 选择排序
 - InsertSort 插入排序
 - QuickSort 快速排序
+
+- BinarySearch 二分查找
 
 - B1001 害死人不偿命的(3n+1)猜想
 - B1009 说反话

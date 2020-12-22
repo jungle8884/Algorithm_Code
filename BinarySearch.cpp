@@ -24,7 +24,7 @@ int binarySearch(int A[], int left, int right, int x){
 }
 
 //A[]为递增序列，x为与查询的数，函数返回第一个大于等于x的元素的位置
-//二分上下界为左闭右闭的[left, right]，传入的初值为[0, n]
+//二分上下界为左闭右闭的[left, right]，传入的初值为[0, n-1]
 int lower_bound(int A[], int left, int right, int x){
 	int mid;
 	while (left < right) //如果序列中不存在x，那么可以假设它存在，返回它的位置。
@@ -41,7 +41,7 @@ int lower_bound(int A[], int left, int right, int x){
 }
 
 //A[]为递增序列，x为欲查询的数，函数返回第一个大于x的元素的位置
-//二分上下界为左闭右闭的[left, right]，传入的初值为[0, n]
+//二分上下界为左闭右闭的[left, right]，传入的初值为[0, n-1]
 int upper_bound(int A[], int left, int right, int x){
 	int mid;
 	while (left < right) //如果序列中不存在x，那么可以假设它存在，返回它的位置。
@@ -61,9 +61,17 @@ int upper_bound(int A[], int left, int right, int x){
 int main(){
 	const int n = 12;
 	int A[n] = {1, 3, 4, 6, 6, 6, 7, 8, 10, 11, 12, 15};
-	printf("%d\n", binarySearch(A, 0, n-1, 6));
-	printf("%d\n", lower_bound(A, 0, n-1, 6));
-	printf("%d\n", upper_bound(A, 0, n-1, 6));
+	int findX = 7;
+	if (findX == binarySearch(A, 0, n-1, findX))
+	{
+		printf("%d\n", findX);
+	}
+	
+	/* int lower_bound_index = lower_bound(A, 0, n-1, findX); //返回第一个大于等于x的元素的位置
+	printf("A[%d]:%d\n", lower_bound_index, A[lower_bound_index]);
+
+	int upper_bound_index = upper_bound(A, 0, n-1, findX); //返回第一个大于x的元素的位置
+	printf("A[%d]:%d\n", upper_bound_index, A[upper_bound_index]); */
 	
 	return 0;
 } 
