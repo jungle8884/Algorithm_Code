@@ -6,6 +6,8 @@
 - kmeans 机器学习-聚类分析
 - RandSelect 随机选择算法，从无序的数组---A[left, right]中返回第K大的数
 
+- codeup1818.cpp 最大公约数和最小公倍数; 分数的四则运算; 找100以内的素数;
+
 - BubbleSort 冒泡排序
 - MergeSort 归并排序-
 - SelectSort 选择排序
